@@ -14,11 +14,12 @@ const [activeMenu, setActiveMenu] = useState(true);
     
     return (
         <StateContext.Provider value={{
-            activeMenu
+            activeMenu,
+            setActiveMenu,
         }}>
             {children}
         </StateContext.Provider>
     )
 }
 
-exportconst useStateContext = () => useContext(StateContext);
+export const useStateContext = () => useContext(StateContext);
